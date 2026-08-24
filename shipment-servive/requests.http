@@ -1,0 +1,77 @@
+### Variables - adjust if the app runs on a different port
+@baseUrl = http://localhost:8080
+
+### 1) First event for a new shipment -> APPLIED, 201
+POST {{baseUrl}}/shipment-events
+Content-Type: application/json
+
+{
+  "eventId": "evt-123",
+  "partner": "dhl",
+  "shipmentId": "ship-456",
+  "status": "IN_TRANSIT",
+  "occurredAt": "2026-03-10T12:00:00Z",
+  "receivedAt": "2026-03-10T12:00:05Z",
+  "location": "CapeTown"
+}
+
+### 2) Exact resubmission of the same eventId -> DUPLICATE, 200, payloadMismatch:false
+POST {{baseUrl}}/shipment-events
+Content-Type: application/json
+
+{
+  "eventId": "evt-123",
+  "partner": "dhl",
+  "shipmentId": "ship-456",
+  "status": "IN_TRANSIT",
+  "occurredAt": "2026-03-10T12:00:00Z",
+  "receivedAt": "2026-03-10T12:00:05Z",
+  "location": "CapeTown"
+}
+
+### 3) Later event, different status -> APPLIED, becomes the new ruling event
+POST {{baseUrl}}/shipment-events
+Content-Type: application/json
+
+{
+  "eventId": "evt-129",
+  "partner": "dhl",
+  "shipmentId": "ship-456",
+  "status": "OUT_FOR_DELIVERY",
+  "occurredAt": "2026-03-10T14:00:00Z",
+  "receivedAt": "2026-03-10T14:00:05Z"
+}
+
+### 4) Earlier event arriving late -> STALE, 201, current status unchanged
+POST {{baseUrl}}/shipment-events
+Content-Type: application/json
+
+{
+  "eventId": "evt-050",
+  "partner": "dhl",
+  "shipmentId": "ship-456",
+  "status": "HANDED_TO_CARRIER",
+  "occurredAt": "2026-03-10T08:00:00Z",
+  "receivedAt": "2026-03-10T08:00:05Z"
+}
+
+### 5) Missing required field ("partner") -> INVALID, 400
+POST {{baseUrl}}/shipment-events
+Content-Type: application/json
+
+{
+  "eventId": "evt-bad",
+  "shipmentId": "ship-456",
+  "status": "IN_TRANSIT",
+  "occurredAt": "2026-03-10T12:00:00Z",
+  "receivedAt": "2026-03-10T12:00:05Z"
+}
+
+### 6) Current state for the shipment built up above
+GET {{baseUrl}}/shipments/ship-456
+
+### 7) Full ordered history for that shipment
+GET {{baseUrl}}/shipments/ship-456/events
+
+### 8) Unknown shipment -> 404
+GET {{baseUrl}}/shipments/ship-does-not-exist

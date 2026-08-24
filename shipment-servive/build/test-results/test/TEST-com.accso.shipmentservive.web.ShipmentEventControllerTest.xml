@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.accso.shipmentservive.web.ShipmentEventControllerTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-08-24T09:11:42.593Z" hostname="SIBUSISO-LAPTOP" time="0.514">
+  <properties/>
+  <testcase name="sameOccurredAt_laterReceivedAt_becomesRuling()" classname="com.accso.shipmentservive.web.ShipmentEventControllerTest" time="0.049"/>
+  <testcase name="statusMeaningNeverOverridesTimestampOrder_laterReturnedAfterEarlierDelivered()" classname="com.accso.shipmentservive.web.ShipmentEventControllerTest" time="0.041"/>
+  <testcase name="malformedJsonBody_returnsBadRequestInvalidShape()" classname="com.accso.shipmentservive.web.ShipmentEventControllerTest" time="0.016"/>
+  <testcase name="missingRequiredField_returnsInvalidWithReasonAndEchoedFields()" classname="com.accso.shipmentservive.web.ShipmentEventControllerTest" time="0.015"/>
+  <testcase name="sameOccurredAtAndReceivedAt_greaterEventIdBecomesRuling()" classname="com.accso.shipmentservive.web.ShipmentEventControllerTest" time="0.037"/>
+  <testcase name="unparseableOccurredAt_returnsInvalid()" classname="com.accso.shipmentservive.web.ShipmentEventControllerTest" time="0.023"/>
+  <testcase name="resubmitSameEventIdSamePayload_sequential_returnsDuplicateNoMismatch()" classname="com.accso.shipmentservive.web.ShipmentEventControllerTest" time="0.051"/>
+  <testcase name="firstEventForNewShipment_isApplied()" classname="com.accso.shipmentservive.web.ShipmentEventControllerTest" time="0.023"/>
+  <testcase name="resubmitSameEventIdDifferentPayload_sequential_returnsDuplicateWithMismatch()" classname="com.accso.shipmentservive.web.ShipmentEventControllerTest" time="0.057"/>
+  <testcase name="unknownStatusValue_returnsInvalid()" classname="com.accso.shipmentservive.web.ShipmentEventControllerTest" time="0.018"/>
+  <testcase name="earlierOccurredAtEvent_isStale_currentStatusUnchanged()" classname="com.accso.shipmentservive.web.ShipmentEventControllerTest" time="0.047"/>
+  <testcase name="laterOccurredAtEvent_becomesApplied_andUpdatesCurrentStatus()" classname="com.accso.shipmentservive.web.ShipmentEventControllerTest" time="0.045"/>
+  <system-out><![CDATA[2026-08-24T11:11:42.597+02:00  INFO 30624 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.accso.shipmentservive.web.ShipmentEventControllerTest]: ShipmentEventControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-08-24T11:11:42.604+02:00  INFO 30624 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.accso.shipmentservive.ShipmentServiveApplication for test class com.accso.shipmentservive.web.ShipmentEventControllerTest
+2026-08-24T11:11:42.609+02:00  INFO 30624 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.accso.shipmentservive.web.ShipmentEventControllerTest]: ShipmentEventControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-08-24T11:11:42.613+02:00  INFO 30624 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.accso.shipmentservive.ShipmentServiveApplication for test class com.accso.shipmentservive.web.ShipmentEventControllerTest
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

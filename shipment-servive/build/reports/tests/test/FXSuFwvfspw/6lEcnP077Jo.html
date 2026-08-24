@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - concurrentIdenticalEventIdSubmissions_exactlyOneNonDuplicateOutcome()</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<a class="breadcrumb" href="../index.html">all</a> &gt; 
+<a class="breadcrumb" href="index.html">com.accso.shipmentservive.concurrency.DuplicateEventConcurrencyTest</a> &gt; 
+<span class="breadcrumb">concurrentIdenticalEventIdSubmissions_exactlyOneNonDuplicateOutcome()</span>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a class="successGroup" href="#">Gradle Test Run :test</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Gradle Test Run :test</h2>
+<h1>concurrentIdenticalEventIdSubmissions_exactlyOneNonDuplicateOutcome()</h1>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a class="" href="#">summary</a>
+</li>
+<li>
+<a class="" href="#">standard output</a>
+</li>
+<li>
+<a class="" href="#">error output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>summary</h2>
+<div>
+<div class="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox">
+<div class="counter">0</div>
+<p>skipped</p>
+</div>
+</td>
+<td>
+<div class="infoBox duration">
+<div class="counter">6.257s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="tab">
+<h2>standard output</h2>
+<span class="code">
+<pre id="root-0-test-stdout-concurrentIdenticalEventIdSubmissions_exactlyOneNonDuplicateOutcome()">2026-08-24T11:11:12.413+02:00  INFO 30624 --- [o-auto-1-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-24T11:11:12.415+02:00  INFO 30624 --- [o-auto-1-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-24T11:11:12.419+02:00  INFO 30624 --- [o-auto-1-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-2] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-1] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-8] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-5] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-7] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.592+02:00  WARN 30624 --- [o-auto-1-exec-7] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: &quot;PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )&quot;; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-2] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: &quot;PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )&quot;; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-4] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-1] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: &quot;PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )&quot;; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+2026-08-24T11:11:13.590+02:00  WARN 30624 --- [o-auto-1-exec-6] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.590+02:00  WARN 30624 --- [o-auto-1-exec-8] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: &quot;PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )&quot;; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+2026-08-24T11:11:13.591+02:00  WARN 30624 --- [o-auto-1-exec-5] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: &quot;PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )&quot;; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+2026-08-24T11:11:13.595+02:00  WARN 30624 --- [o-auto-1-exec-6] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: &quot;PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )&quot;; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+2026-08-24T11:11:13.598+02:00  WARN 30624 --- [o-auto-1-exec-4] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: &quot;PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )&quot;; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="root-0-test-stdout-concurrentIdenticalEventIdSubmissions_exactlyOneNonDuplicateOutcome()">Copy</button>
+</span>
+</div>
+<div class="tab">
+<h2>error output</h2>
+<span class="code">
+<pre id="root-0-test-stderr-concurrentIdenticalEventIdSubmissions_exactlyOneNonDuplicateOutcome()">Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\sibusiso.kubalo\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.18.11\82212e5b3633e7a65fca8bec525762cfb6c9bae4\byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="root-0-test-stderr-concurrentIdenticalEventIdSubmissions_exactlyOneNonDuplicateOutcome()">Copy</button>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 9.5.1</a> at 24 Aug 2026, 11:11:45</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+2026-08-24 12:45:58.555389+02:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement " \000d\000a  [*]""eventId"": ""evt-123"",\000d\000a  ""partner"": ""dhl"",\000d\000a  ""shipmentId"": ""ship-456"",\000d\000a  ""status"": ""IN_TRANSIT"",\000d\000a  ""occurredAt"": ""2026-03-10T12:00:00Z"",\000d\000a  ""receivedAt"": ""2026-03-10T12:00:05Z"",\000d\000a  ""location"": ""Amsterdam""\000d\000a "; SQL statement:
+ 
+  "eventId": "evt-123",
+  "partner": "dhl",
+  "shipmentId": "ship-456",
+  "status": "IN_TRANSIT",
+  "occurredAt": "2026-03-10T12:00:00Z",
+  "receivedAt": "2026-03-10T12:00:05Z",
+  "location": "Amsterdam"
+  [42000-240]

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.accso.shipmentservive.ShipmentServiveApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-08-24T09:11:30.011Z" hostname="SIBUSISO-LAPTOP" time="6.053">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.accso.shipmentservive.ShipmentServiveApplicationTests" time="0.049"/>
+  <system-out><![CDATA[2026-08-24T11:11:30.030+02:00  INFO 30624 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.accso.shipmentservive.ShipmentServiveApplicationTests]: ShipmentServiveApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-08-24T11:11:30.179+02:00  INFO 30624 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.accso.shipmentservive.ShipmentServiveApplication for test class com.accso.shipmentservive.ShipmentServiveApplicationTests
+2026-08-24T11:11:30.195+02:00  INFO 30624 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.accso.shipmentservive.ShipmentServiveApplicationTests]: ShipmentServiveApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-08-24T11:11:30.204+02:00  INFO 30624 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.accso.shipmentservive.ShipmentServiveApplication for test class com.accso.shipmentservive.ShipmentServiveApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-08-24T11:11:30.589+02:00  INFO 30624 --- [    Test worker] c.a.s.ShipmentServiveApplicationTests    : Starting ShipmentServiveApplicationTests using Java 21 with PID 30624 (started by sibusiso.kubalo in C:\Users\sibusiso.kubalo\Documents\Sibu\Poppy\shipment-servive)
+2026-08-24T11:11:30.597+02:00  INFO 30624 --- [    Test worker] c.a.s.ShipmentServiveApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-08-24T11:11:32.590+02:00  INFO 30624 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-24T11:11:33.149+02:00  INFO 30624 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 525 ms. Found 1 JPA repository interface.
+2026-08-24T11:11:33.634+02:00  INFO 30624 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-24T11:11:33.738+02:00  INFO 30624 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-24T11:11:33.742+02:00  INFO 30624 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-08-24T11:11:33.752+02:00  INFO 30624 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:shipment-servive-test-ffcf3493-0a75-41dc-9dd9-f20c238842bd user=SA
+2026-08-24T11:11:33.753+02:00  INFO 30624 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-08-24T11:11:33.756+02:00  INFO 30624 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:shipment-servive-test-ffcf3493-0a75-41dc-9dd9-f20c238842bd]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: SHIPMENT-SERVIVE-TEST-FFCF3493-0A75-41DC-9DD9-F20C238842BD/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-24T11:11:33.925+02:00  INFO 30624 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-24T11:11:33.958+02:00  INFO 30624 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-24T11:11:35.922+02:00  INFO 30624 --- [    Test worker] c.a.s.ShipmentServiveApplicationTests    : Started ShipmentServiveApplicationTests in 5.659 seconds (process running for 73.343)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

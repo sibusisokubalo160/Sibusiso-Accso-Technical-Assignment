@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.accso.shipmentservive.concurrency.DuplicateEventConcurrencyTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-08-24T09:10:33.597Z" hostname="SIBUSISO-LAPTOP" time="43.603">
+  <properties/>
+  <testcase name="concurrentIdenticalEventIdSubmissions_exactlyOneNonDuplicateOutcome()" classname="com.accso.shipmentservive.concurrency.DuplicateEventConcurrencyTest" time="6.257"/>
+  <system-out><![CDATA[11:10:37.549 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.accso.shipmentservive.concurrency.DuplicateEventConcurrencyTest]: DuplicateEventConcurrencyTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:10:40.282 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.accso.shipmentservive.ShipmentServiveApplication for test class com.accso.shipmentservive.concurrency.DuplicateEventConcurrencyTest
+11:10:40.868 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.accso.shipmentservive.concurrency.DuplicateEventConcurrencyTest]: DuplicateEventConcurrencyTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:10:40.883 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.accso.shipmentservive.ShipmentServiveApplication for test class com.accso.shipmentservive.concurrency.DuplicateEventConcurrencyTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-08-24T11:10:45.680+02:00  INFO 30624 --- [    Test worker] c.a.s.c.DuplicateEventConcurrencyTest    : Starting DuplicateEventConcurrencyTest using Java 21 with PID 30624 (started by sibusiso.kubalo in C:\Users\sibusiso.kubalo\Documents\Sibu\Poppy\shipment-servive)
+2026-08-24T11:10:45.689+02:00  INFO 30624 --- [    Test worker] c.a.s.c.DuplicateEventConcurrencyTest    : No active profile set, falling back to 1 default profile: "default"
+2026-08-24T11:10:48.937+02:00  INFO 30624 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-24T11:10:49.319+02:00  INFO 30624 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 296 ms. Found 1 JPA repository interface.
+2026-08-24T11:10:52.716+02:00  INFO 30624 --- [    Test worker] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 0 (http)
+2026-08-24T11:10:52.804+02:00  INFO 30624 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-24T11:10:52.806+02:00  INFO 30624 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-08-24T11:10:53.570+02:00  INFO 30624 --- [    Test worker] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 7779 ms
+2026-08-24T11:10:55.333+02:00  INFO 30624 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-08-24T11:10:55.955+02:00  INFO 30624 --- [    Test worker] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-08-24T11:11:00.454+02:00  INFO 30624 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-24T11:11:00.635+02:00  INFO 30624 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-24T11:11:01.307+02:00  INFO 30624 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:shipment-servive-test-8ab2dcda-4124-441f-acf4-831b9cf238c3 user=SA
+2026-08-24T11:11:01.313+02:00  INFO 30624 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-24T11:11:01.596+02:00  INFO 30624 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:shipment-servive-test-8ab2dcda-4124-441f-acf4-831b9cf238c3]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: SHIPMENT-SERVIVE-TEST-8AB2DCDA-4124-441F-ACF4-831B9CF238C3/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-24T11:11:06.255+02:00  INFO 30624 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-24T11:11:06.398+02:00  INFO 30624 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-24T11:11:07.130+02:00  INFO 30624 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-24T11:11:10.911+02:00  INFO 30624 --- [    Test worker] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 49670 (http) with context path '/'
+2026-08-24T11:11:10.927+02:00  INFO 30624 --- [    Test worker] c.a.s.c.DuplicateEventConcurrencyTest    : Started DuplicateEventConcurrencyTest in 27.402 seconds (process running for 48.348)
+2026-08-24T11:11:12.413+02:00  INFO 30624 --- [o-auto-1-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-24T11:11:12.415+02:00  INFO 30624 --- [o-auto-1-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-24T11:11:12.419+02:00  INFO 30624 --- [o-auto-1-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-2] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-1] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-8] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-5] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-7] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.592+02:00  WARN 30624 --- [o-auto-1-exec-7] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: "PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )"; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-2] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: "PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )"; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-4] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.589+02:00  WARN 30624 --- [o-auto-1-exec-1] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: "PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )"; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+2026-08-24T11:11:13.590+02:00  WARN 30624 --- [o-auto-1-exec-6] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-08-24T11:11:13.590+02:00  WARN 30624 --- [o-auto-1-exec-8] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: "PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )"; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+2026-08-24T11:11:13.591+02:00  WARN 30624 --- [o-auto-1-exec-5] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: "PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )"; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+2026-08-24T11:11:13.595+02:00  WARN 30624 --- [o-auto-1-exec-6] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: "PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )"; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+2026-08-24T11:11:13.598+02:00  WARN 30624 --- [o-auto-1-exec-4] org.hibernate.orm.jdbc.error             : Unique index or primary key violation: "PUBLIC.CONSTRAINT_2 INDEX PUBLIC.PRIMARY_KEY_2 ON PUBLIC.SHIPMENT_EVENT(EVENT_ID) VALUES ( /* 3 */ 'evt-concurrent-9ca717d5-d1c3-4951-80a6-2d1bf8bc338d' )"; SQL statement:
+insert into shipment_event (location,occurred_at,partner,received_at,shipment_id,status,event_id) values (?,?,?,?,?,?,?) [23505-240]
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\sibusiso.kubalo\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.18.11\82212e5b3633e7a65fca8bec525762cfb6c9bae4\byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
