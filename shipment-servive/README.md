@@ -4,8 +4,7 @@ A backend service that ingests shipment status events from courier partners, res
 / out-of-order / conflicting updates deterministically, and exposes a reliable current-status view
 and ordered history per shipment.
 
-Built for the Accso technical interview assignment. See [NOTES.md](NOTES.md) for spec-ambiguity
-decisions, known limitations, and what's next.
+Built for the Accso technical interview assignment.
 
 ## Requirements
 
